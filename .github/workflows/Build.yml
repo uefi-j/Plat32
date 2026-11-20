@@ -16,4 +16,4 @@ jobs:
         with:
           name: YEEWARE
           path: |
-            PLAT32.ELF
+            PLATFORMER32.ELF
