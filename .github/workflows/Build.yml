@@ -1,0 +1,19 @@
+name: Compilar PLAT32.ELF
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:latest
+    env:
+      GSKIT: /usr/local/ps2dev/gsKit
+    steps:
+      - run: apk add --no-cache git make
+      - uses: actions/checkout@v4
+      - run: make
+      - uses: actions/upload-artifact@v4
+        with:
+          name: YEEWARE
+          path: |
+            PLAT32.ELF
