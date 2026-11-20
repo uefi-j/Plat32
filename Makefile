@@ -1,5 +1,5 @@
-EE_BIN = platformer32.elf
-EE_OBJS = main.o
+EE_BIN = plat32.elf
+EE_OBJS = main_plat.o
 EE_LIBS = -lgskit -ldmakit -lpad -lmc -lkernel -lc
 EE_CFLAGS += -Wno-unused-function
 
